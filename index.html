@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Task Manager</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f9fafb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        color: #333;
+      }
+
+      .container {
+        background: #ffffff;
+        padding: 20px 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .form {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .input {
+        flex: 1;
+        padding: 10px 15px;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        font-size: 16px;
+        outline: none;
+        transition: all 0.3s ease;
+      }
+
+      .input:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 5px rgba(37, 99, 235, 0.5);
+      }
+
+      .add {
+        padding: 10px 15px;
+        background: #2563eb;
+        color: #ffffff;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      .add:hover {
+        background: #1e40af;
+      }
+
+      .tasks {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .task {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #f3f4f6;
+        padding: 12px 15px;
+        border-radius: 8px;
+        border: 1px solid #e5e7eb;
+        transition: background 0.3s ease, transform 0.2s ease;
+      }
+
+      .task:hover {
+        background: #e5e7eb;
+        transform: translateY(-2px);
+      }
+
+      .task.done {
+        text-decoration: line-through;
+        color: #6b7280;
+      }
+
+      .del {
+        background: #ef4444;
+        color: #ffffff;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      .del:hover {
+        background: #b91c1c;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form">
+        <input type="text" class="input" placeholder="Add a new task..." />
+        <input type="submit" class="add" value="Add" />
+      </div>
+      <div class="tasks"></div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
